@@ -26,6 +26,9 @@ Credits
 "BrunoDiazU" - Spanish translation
 "teodor6140" - Headshot feedback "whack" sound
 
+"Doctor Dank" - Graphical Effects / PuboVL / Other Changes
+"Liza" - The entire color palette
+
 And many others which weren't mentioned here.
 
 
