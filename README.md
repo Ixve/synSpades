@@ -3,7 +3,7 @@
 [OpenSpades Website](https://openspades.yvt.jp) — [Community](https://buildandshoot.com)
 
 ## What is this?
-synSpades is a modified version of OpenSpades, with changes by Doctor Dank, including a bigger color palette (I don't know who to credit) & other smaller changes
+synSpades is a modified version of OpenSpades, with changes by Doctor Dank, including a bigger color palette thanks to Liza & other smaller changes
 
 ## How to Build/Install?
 
