@@ -2,8 +2,11 @@
 
 [OpenSpades Website](https://openspades.yvt.jp) — [Community](https://buildandshoot.com)
 
+## Little warning
+I 75% of the time fuck up something, so please beware there might be errors here and there, just report them to me by opening an issue. I'll try to solve it.
+
 ## What is this?
-synSpades is a modified version of OpenSpades, with changes by Doctor Dank, including a bigger color palette thanks to Liza & other smaller changes
+synSpades is a modified version of OpenSpades, with changes by Doctor Dank, including a bigger color palette thanks to Liza & other smaller changes such as macros.
 
 ## How do I use the macros?
 Write `/syn_macro_` in chat and it'll essentially explain itself to you. There's currently only a macro for the P key & the Mouse Button 4 & 5 keys.
