@@ -30,6 +30,10 @@
 #include <ScriptBindings/Config.h>
 #include <ScriptBindings/ScriptFunction.h>
 
+DEFINE_SPADES_SETTING(syn_macro_P, "Testing Macro - P - /syn_macro_P [macro]");
+DEFINE_SPADES_SETTING(syn_macro_MS4, "Mouse Button 4 Macro - /syn_macro_MS4 [macro]");
+DEFINE_SPADES_SETTING(syn_macro_MS5, "Mouse Button 5 Macro - /syn_macro_MS5 [macro]")
+
 namespace spades {
 	namespace client {
 		ClientUI::ClientUI(IRenderer *r, IAudioDevice *a, FontManager *fontManager, Client *client)
@@ -73,6 +77,27 @@ namespace spades {
 				return;
 			client->ShowAlert(msg, Client::AlertType::Notice);
 		}
+
+// macro shit stuff thing start
+	void ClientUI::sendP() {
+		if (!client)
+			return;
+		client->net->SendChat((std::string)syn_macro_P, false);
+	}
+
+	void ClientUI::sendMS4() {
+		if (!client)
+			return;
+		client->net->SendChat((std::string)syn_macro_MS4, false);
+	}
+
+void ClientUI::sendMS5() {
+	if (!client)
+		return;
+	client->net->SendChat((std::string)syn_macro_MS5, false);
+}
+
+// macro shit stuff thing end
 
 		void ClientUI::AlertWarning(const std::string &msg) {
 			if (!client)

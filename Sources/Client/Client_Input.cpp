@@ -87,6 +87,8 @@ DEFINE_SPADES_SETTING(cg_alerts, "1");
 SPADES_SETTING(cg_manualFocus);
 DEFINE_SPADES_SETTING(cg_keyAutoFocus, "MiddleMouseButton");
 
+DEFINE_SPADES_SETTING(syn_macrobind1, "");
+
 namespace spades {
 	namespace client {
 
@@ -520,6 +522,15 @@ namespace spades {
 					} else if (CheckKey(cg_keyGlobalChat, name) && down) {
 						// global chat
 						scriptedUI->EnterGlobalChatWindow();
+						scriptedUI->setIgnored(name);
+					} else if (CheckKey("p", name) && down) {
+						scriptedUI ->sendP();
+						scriptedUI->setIgnored(name);
+					} else if (CheckKey("MouseButton4", name) && down) {
+						scriptedUI ->sendMS4();
+						scriptedUI->setIgnored(name);
+					} else if (CheckKey("MouseButton5", name) && down) {
+						scriptedUI ->sendMS5();
 						scriptedUI->setIgnored(name);
 					} else if (CheckKey(cg_keyTeamChat, name) && down) {
 						// team chat
