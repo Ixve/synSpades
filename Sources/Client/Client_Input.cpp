@@ -532,7 +532,10 @@ namespace spades {
 					} else if (CheckKey("MouseButton5", name) && down) {
 						scriptedUI ->sendMS5();
 						scriptedUI->setIgnored(name);
-					} else if (CheckKey(cg_keyTeamChat, name) && down) {
+					} else if (CheckKey("o", name) && down) { // amogus
+						scriptedUI ->susamogus(); // sussy based mogus
+						scriptedUI->setIgnored(name); // among us in real life
+					} else if (CheckKey(cg_keyTeamChat, name) && down) { // impostor sus red
 						// team chat
 						scriptedUI->EnterTeamChatWindow();
 						scriptedUI->setIgnored(name);
