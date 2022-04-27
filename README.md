@@ -6,7 +6,7 @@
 synSpades is a modified version of OpenSpades, with changes by Doctor Dank, including a bigger color palette thanks to Liza & other smaller changes
 
 ## How do I use the macros?
-Write /syn_macro_ in chat and it'll essentially explain itself to you. There's currently only a macro for the P key & the Mouse Button 4 & 5 keys.
+Write `/syn_macro_` in chat and it'll essentially explain itself to you. There's currently only a macro for the P key & the Mouse Button 4 & 5 keys.
 If someone can, please implement a macro menu where you can set macro keys yourself, as right now you have to add lines to the code to have another bind.
 
 ## How to Build/Install?
