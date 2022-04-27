@@ -5,6 +5,10 @@
 ## What is this?
 synSpades is a modified version of OpenSpades, with changes by Doctor Dank, including a bigger color palette thanks to Liza & other smaller changes
 
+## How do I use the macros?
+Write `/syn_macro_` in chat and it'll essentially explain itself to you. There's currently only a macro for the P key & the Mouse Button 4 & 5 keys.
+If someone can, please implement a macro menu where you can set macro keys yourself, as right now you have to add lines to the code to have another bind.
+
 ## How to Build/Install?
 
 ### On Linux
@@ -44,15 +48,15 @@ GCC 4.9 / Clang 3.2 or later is recommended because OpenSpades relies on C++11 f
    mkdir synspades.mk && cd synspades.mk && cmake .. -DCMAKE_BUILD_TYPE=RelWithDebInfo && make
    ```
 
-4. Install OpenSpades (optional but recommended):
+4. Install synSpades (optional but recommended):
 
    `sudo make install`
 
-   **Important**: If you have previously installed OpenSpades or any modified version, you have to uninstall it manually by `sudo rm -rf /usr/local/share/games/openspades` before installing a new one.
+   **Important**: If you have previously installed OpenSpades or any modified version of OpenSpades, you have to uninstall it manually by `sudo rm -rf /usr/local/share/games/openspades` before installing a new one.
 
 5. Launch:
 
-   `openspades` (if installed) or `cd $REPO_DIRECTORY/openspades.mk; bin/OpenSpades` and enjoy
+   `openspades` (if installed) or `cd $REPO_DIRECTORY/synspades.mk; bin/OpenSpades` and enjoy
 
 
 ### Windows
