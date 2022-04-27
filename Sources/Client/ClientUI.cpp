@@ -32,7 +32,7 @@
 
 DEFINE_SPADES_SETTING(syn_macro_P, "Testing Macro - P - /syn_macro_P [macro]");
 DEFINE_SPADES_SETTING(syn_macro_MS4, "Mouse Button 4 Macro - /syn_macro_MS4 [macro]");
-DEFINE_SPADES_SETTING(syn_macro_MS5, "Mouse Button 5 Macro - /syn_macro_MS5 [macro]")
+DEFINE_SPADES_SETTING(syn_macro_MS5, "Mouse Button 5 Macro - /syn_macro_MS5 [macro]");
 
 namespace spades {
 	namespace client {
