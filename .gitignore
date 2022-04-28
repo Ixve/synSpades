@@ -122,3 +122,7 @@ ipch/
 *.sln
 *.vcxproj
 OpenSpades.rc
+
+
+#User-made script:
+test.sh
