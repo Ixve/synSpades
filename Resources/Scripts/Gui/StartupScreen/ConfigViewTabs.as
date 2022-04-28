@@ -71,8 +71,7 @@ namespace spades {
                 e.Caption = _Tr("StartupScreen", "Fullscreen Mode");
                 e.Bounds = AABB2(230.f, 0.f, 200.f, 24.f);
                 HelpHandler(helpView,
-                    _Tr("StartupScreen", "By running in fullscreen mode OpenSpades occupies the "
-                    "screen, making it easier for you to concentrate on playing the game.")).Watch(e);
+                    _Tr("StartupScreen", "Warning: Only giga chads are allowed to use fullscreen.")).Watch(e);
                 @e.Activated = spades::ui::EventHandler(this.OnFullscreenCheck);
                 AddChild(e);
                 @fullscreenCheck = e;
@@ -85,8 +84,7 @@ namespace spades {
                 e.Bounds = AABB2(100.f, 30.f, 140.f, 24.f);
                 e.GroupName = "driver";
                 HelpHandler(helpView,
-                    _Tr("StartupScreen", "OpenGL renderer uses your computer's graphics "
-                        "accelerator to generate the game screen.")).Watch(e);
+                    _Tr("StartupScreen", "OpenGL renderer uses the PC GPU for rendering and is also miles better than Software rendering.")).Watch(e);
                 @e.Activated = spades::ui::EventHandler(this.OnDriverOpenGL);
                 AddChild(e);
                 @driverOpenGL = e;
@@ -97,9 +95,7 @@ namespace spades {
                 e.Bounds = AABB2(250.f, 30.f, 140.f, 24.f);
                 e.GroupName = "driver";
                 HelpHandler(helpView,
-                _Tr("StartupScreen", "Software renderer uses CPU to generate the game "
-                    "screen. Its quality and performance might be inferior to OpenGL "
-                    "renderer, but it works even with an unsupported GPU.")).Watch(e);
+                _Tr("StartupScreen", "Software renderer uses CPU for rendering, inferior to OpenGL rendering.")).Watch(e);
                 @e.Activated = spades::ui::EventHandler(this.OnDriverSoftware);
                 AddChild(e);
                 @driverSoftware = e;
@@ -133,26 +129,26 @@ namespace spades {
                     StartupScreenComplexConfig cplx;
                     cplx.AddEditor(StartupScreenConfigCheckItemEditor(ui,
                     StartupScreenConfig(ui, "r_cameraBlur"), "0", "1", _Tr("StartupScreen", "Camera Blur"),
-                    _Tr("StartupScreen", "Blurs the screen when you turn quickly.")));
+                    _Tr("StartupScreen", "If you use this, you're a psychopath.")));
                     cplx.AddEditor(StartupScreenConfigCheckItemEditor(ui,
                     StartupScreenConfig(ui, "r_lens"), "0", "1", _Tr("StartupScreen", "Lens Effect"),
-                    _Tr("StartupScreen", "Simulates distortion caused by a real camera lens.")));
+                    _Tr("StartupScreen", "Why would any pro gamer want to use this..?")));
                     cplx.AddEditor(StartupScreenConfigCheckItemEditor(ui,
                     StartupScreenConfig(ui, "r_bloom"), "0", "1", _Tr("StartupScreen", "Lens Scattering Filter"),
-                    _Tr("StartupScreen", "Simulates light being scattered by dust on the camera lens.")));
+                    _Tr("StartupScreen", "Light scattered by dust? No thank you.")));
                     // r_lens is currently no-op
                     cplx.AddEditor(StartupScreenConfigCheckItemEditor(ui,
                     StartupScreenConfig(ui, "r_lensFlare"), "0", "1", _Tr("StartupScreen", "Lens Flare"),
-                    _Tr("StartupScreen", "The Sun causes lens flare.")));
+                    _Tr("StartupScreen", "Ah yes, the Counter Strike 1.6 flashbang simulator.")));
                     cplx.AddEditor(StartupScreenConfigCheckItemEditor(ui,
                     StartupScreenConfig(ui, "r_lensFlareDynamic"), "0", "1", _Tr("StartupScreen", "Flares for Dynamic Lights"),
-                    _Tr("StartupScreen", "Enables lens flare for light sources other than the Sun.")));
+                    _Tr("StartupScreen", "Are you looking for cinematic shots? Well you've come to the wrong client.")));
                     cplx.AddEditor(StartupScreenConfigCheckItemEditor(ui,
                     StartupScreenConfig(ui, "r_colorCorrection"), "0", "1", _Tr("StartupScreen", "Color Correction"),
                     _Tr("StartupScreen", "Applies cinematic color correction to make the image look better.")));
                     cplx.AddEditor(StartupScreenConfigCheckItemEditor(ui,
                     StartupScreenConfig(ui, "r_depthOfField"), "0", "1", _Tr("StartupScreen", "Depth of Field"),
-                    _Tr("StartupScreen", "Blurs out-of-focus objects.")));
+                    _Tr("StartupScreen", "PRO GAMER QUIZ - Is DoF good? (answer is no.)")));
                     cplx.AddEditor(StartupScreenConfigCheckItemEditor(ui,
                     StartupScreenConfig(ui, "r_ssao"), "0", "1", _Tr("StartupScreen", "Screen Space Ambient Occlusion"),
                     _Tr("StartupScreen", "Simulates soft shadows that occur between nearby objects.")));
@@ -164,8 +160,7 @@ namespace spades {
 
                     cfg.AddRow(StartupScreenConfigComplexItemEditor(ui, cplx,
                         _Tr("StartupScreen", "Post-process"),
-                        _Tr("StartupScreen", "Post-process modifies the image to make it look better and "
-                            "more realistic.")));
+                        _Tr("StartupScreen", "If you're looking for realism, you're better off using the vanilla client.")));
                 }
 
                 cfg.AddRow(StartupScreenConfigSelectItemEditor(ui,
@@ -183,18 +178,16 @@ namespace spades {
                     cplx.AddEditor(StartupScreenConfigCheckItemEditor(ui,
                     StartupScreenConfig(ui, "r_dlights"), "0", "1", _Tr("StartupScreen", "Dynamic Lights"),
                     _Tr("StartupScreen",
-                    "Gives some objects an ability to emit light to give them "
-                    "an energy-emitting impression.")));
+                    "Nuclear Reactor Simulator 2022")));
                     cplx.AddEditor(StartupScreenConfigCheckItemEditor(ui,
                     StartupScreenConfig(ui, "r_modelShadows"), "0", "1", _Tr("StartupScreen", "Shadows"),
                     _Tr("StartupScreen", "Non-static object casts a shadow.")));
                     cplx.AddEditor(StartupScreenConfigCheckItemEditor(ui,
                     StartupScreenConfig(ui, "r_fogShadow"), "0", "1", _Tr("StartupScreen", "Volumetric Fog"),
-                    _Tr("StartupScreen", "Simulates shadow being casted to the fog particles using a "
-                    "super highly computationally demanding algorithm. ")));
+                    _Tr("StartupScreen", "Do you want your PC to end up like the nuclear reactor at Chernobyl? Check this setting then!")));
                     cplx.AddEditor(StartupScreenConfigCheckItemEditor(ui,
                     StartupScreenConfig(ui, "r_physicalLighting"), "0", "1", _Tr("StartupScreen", "Physically Based Lighting"),
-                    _Tr("StartupScreen", "Uses more accurate approximation techniques to decide the brightness of objects.")));
+                    _Tr("StartupScreen", "The Less FPS-inator 9000")));
 
                     cplx.AddPreset(StartupScreenComplexConfigPreset(_Tr("StartupScreen", "Low"), "1|0|0|0"));
                     cplx.AddPreset(StartupScreenComplexConfigPreset(_Tr("StartupScreen", "Medium"), "1|1|0|0"));
@@ -202,8 +195,7 @@ namespace spades {
 
                     cfg.AddRow(StartupScreenConfigComplexItemEditor(ui, cplx,
                         _Tr("StartupScreen", "Direct Lights"),
-                        _Tr("StartupScreen", "Controls how light encounting a material and atmosphere directly "
-                                           "affects its appearance.")));
+                        _Tr("StartupScreen", "No.")));
                 }
 
                 {
@@ -214,9 +206,9 @@ namespace spades {
                         _Tr("StartupScreen",
                         "Water Shader|"
                         "None:Water is rendered in the same way that normal blocks are done.|"
-                        "Level 1:Refraction and the reflected Sun are simulated.|"
-                        "Level 2:Waving water is simulated as well as reflection and refraction.|"
-                        "Level 3:Reflections and refractions are rendered at the highest quality using screen-space techniques.")));
+                        "Level 1:The sun can blind you using reflections.|"
+                        "Level 2:Alongside the flashbang, it features waves!|"
+                        "Level 3:So basically, Chernobyl 2.0")));
 
                     cplx.AddPreset(StartupScreenComplexConfigPreset(_Tr("StartupScreen", "Low"), "0"));
                     cplx.AddPreset(StartupScreenComplexConfigPreset(_Tr("StartupScreen", "Med"), "1"));
@@ -241,7 +233,7 @@ namespace spades {
                 cfg.AddRow(StartupScreenConfigSelectItemEditor(ui,
                     StartupScreenConfig(ui, "r_swUndersampling"), "0|1|2",
                     _Tr("StartupScreen",
-                    "Fast Mode:Reduces the image resolution to make the rendering faster.|"
+                    "Fast Mode:Set this to 4x for best FPS|"
                     "Off|2x|4x")));
 
 
@@ -463,9 +455,8 @@ namespace spades {
                 e.Bounds = AABB2(100.f, 0.f, 100.f, 24.f);
                 e.GroupName = "driver";
                 HelpHandler(helpView,
-                    _Tr("StartupScreen", "Uses an OpenAL-capable sound card to process sound. "
-                    "In most cases where there isn't such a sound card, software emulation is "
-                    "used.")).Watch(e);
+                    _Tr("StartupScreen", "Uses OpenAL-capable sound card to produce sound "
+                    "Where there's no sound card, software emulation is used.")).Watch(e);
                 @e.Activated = spades::ui::EventHandler(this.OnDriverOpenAL);
                 AddChild(e);
                 @driverOpenAL = e;
@@ -491,7 +482,7 @@ namespace spades {
                 e.Bounds = AABB2(320.f, 0.f, 100.f, 24.f);
                 e.GroupName = "driver";
                 HelpHandler(helpView,
-                    _Tr("StartupScreen", "Disables audio output.")).Watch(e);
+                    _Tr("StartupScreen", "Disables audio output.. Completely.. Check this if you're a psycho..")).Watch(e);
                 @e.Activated = spades::ui::EventHandler(this.OnDriverNull);
                 AddChild(e);
                 @driverNull = e;
@@ -505,7 +496,8 @@ namespace spades {
                     _Tr("StartupScreen", "Polyphonics"), _Tr("StartupScreen",
                     "Specifies how many sounds can be played simultaneously. "
                     "Higher value needs more processing power, so setting this too high might "
-                    "cause an overload (especially with a software emulation)."),
+                    "cause an overload (especially with a software emulation). "
+                    "Pro tip: set this to ~24 poly if you're using Software rendering."),
                     ConfigNumberFormatter(0, " poly")));
 
                 cfg.AddRow(StartupScreenConfigCheckItemEditor(ui,
@@ -783,9 +775,23 @@ namespace spades {
                 AddChild(button);
             }
 
+            {
+                spades::ui::Button button(Manager);
+                button.Caption = _Tr("StartupScreen", "Acquire some bitches");
+                button.Bounds = AABB2(size.x - 360.f, size.y - 30.f, 180.f, 30.f);
+                @button.Activated = spades::ui::EventHandler(this.AcquireBitches);
+                AddChild(button);
+            }
+
         }
         private void OnCopyReport(spades::ui::UIElement@){
              Manager.Copy(helper.GetReport());
+        }
+
+        private void AcquireBitches(spades::ui::UIElement@){
+             string msg = _Tr("StartupScreen", "A fatal error has occured whilst attempting to acquire you some bitches.\nYou must be a Valorant player, like klook. (Or you are infact, klook)");
+             AlertScreen al(Parent, msg, 100.f);
+             al.Run();
         }
 
 
