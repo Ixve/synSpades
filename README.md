@@ -2,6 +2,9 @@
 
 [OpenSpades Website](https://openspades.yvt.jp) — [Community](https://buildandshoot.com)
 
+# Warning
+This project has been archived, and will not be updated any longer. If you want a better and/or updated OpenSpades client I recommend: [ZeroSpades](https://github.com/siecvi/zerospades/releases), [DankSpades](https://www.github.com/yusufcardinal/openspades) & [NucetoSpades](https://github.com/Nuceto/NucetoSpadesOld/releases).
+
 ## Little warning
 I 75% of the time fuck up something, so please beware there might be errors here and there, just report them to me by opening an issue. I'll try to solve it.
 
